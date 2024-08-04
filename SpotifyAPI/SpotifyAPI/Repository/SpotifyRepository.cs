@@ -80,8 +80,8 @@ namespace SpotifyAPI.Repository
             var request = new HttpRequestMessage(HttpMethod.Post, "https://accounts.spotify.com/api/token");
             request.Content = new StringContent("grant_type=client_credentials", System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
 
-            var clientId = "599eb145dd9241c4a9cb1776f9477c1f";
-            var clientSecret = "289b9d89c94d4914a02f349bff1fab88";
+            var clientId = "599eb145dd9241c4a9cb16f9477c1f";
+            var clientSecret = "289b9d89c94d49102f349bff1fab88";
             var authHeaderValue = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}"));
             request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", authHeaderValue);
 
